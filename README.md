@@ -1,22 +1,49 @@
-# NasaCare Website
+# NasaCare
 
-Professional multi-page marketing website for **NasaCare**, a disposable nasal cleaning stick brand.
-Built as a modern, responsive startup website with a clean healthcare visual system.
+Gentle, safe, and modern nasal hygiene for everyday life.
 
-## Overview
+## Live Website
 
-This project is the production-ready front-end website for NasaCare, designed to present:
+Visit the official website here: [https://nasacare.vercel.app/](https://nasacare.vercel.app/)
 
-- Product value and trust signals
-- How-it-works education
-- Pricing conversion flow
-- FAQ and contact support
+## What Is NasaCare?
 
-The website is built as a single-page application (SPA) with route-based pages and reusable section components.
+NasaCare is a disposable nasal cleaning stick designed to make personal hygiene simple, hygienic, and comfortable.
 
-## Live Product Scope
+It is built for people who want:
 
-Core pages currently implemented:
+- A gentle cleaning experience
+- A safer product design
+- Portable, travel-friendly use
+- A clean and discreet daily care routine
+
+## Product Highlights
+
+- Dual ended design
+- Soft silicone tips
+- Safety base for controlled use
+- Anti-slip grip
+- Disposable and hygienic
+
+## Website Preview
+
+### Hero Product
+
+![NasaCare Hero Product](src/assets/nasacare-hero-product.webp)
+
+### Lifestyle Usage
+
+![NasaCare Lifestyle Usage](src/assets/nasacare-usage-lifestyle.webp)
+
+### Packaging
+
+![NasaCare Packaging](src/assets/nasacare-packaging-box.webp)
+
+### Features Diagram
+
+![NasaCare Features Diagram](src/assets/nasacare-features-diagram.webp)
+
+## Website Pages
 
 - Home
 - Product
@@ -26,107 +53,28 @@ Core pages currently implemented:
 - Pricing
 - Contact
 
-## Design Direction
+## Brand Feel
 
-- Professional healthcare-oriented UI
-- Light, clean visual language
-- Consistent spacing and typography system
-- Subtle motion only (no heavy animation)
-- Fully responsive across mobile, tablet, and desktop
-- Optimized image assets in `.webp`
+The website is designed to feel:
 
-## Tech Stack
+- Clean
+- Trustworthy
+- Professional
+- Soft and premium
+- Startup-ready
 
-- React 19
-- TypeScript
-- Vite
-- Tailwind CSS
-- Framer Motion
-- React Router DOM
-- Lucide React + React Icons
+## For Customers
 
-## Project Structure
+NasaCare is made for everyday users who want a quick, hygienic alternative to tissues and traditional tools.
 
-```text
-src/
-├─ assets/                  # Product and lifestyle webp assets
-├─ components/
-│  ├─ layout/               # Navbar, Footer, Page shell
-│  ├─ sections/             # Reusable marketing sections
-│  └─ ui/                   # Shared UI primitives
-├─ lib/                     # Shared helpers (animations)
-├─ pages/                   # Route pages
-├─ App.tsx                  # Router configuration
-├─ index.css                # Global design system styles
-└─ main.tsx                 # App entry point
-```
+If you are visiting for product details, start here:
 
-## Local Development
+- Website: [https://nasacare.vercel.app/](https://nasacare.vercel.app/)
+- Pricing Page: [https://nasacare.vercel.app/pricing](https://nasacare.vercel.app/pricing)
+- FAQ Page: [https://nasacare.vercel.app/faq](https://nasacare.vercel.app/faq)
 
-### Prerequisites
+## Contact
 
-- Node.js 20+
-- npm 10+
+For product and support inquiries, please use the contact page:
 
-### Install
-
-```bash
-npm install
-```
-
-### Run Dev Server
-
-```bash
-npm run dev
-```
-
-Default local URL: `http://localhost:5173`
-
-## Scripts
-
-```bash
-npm run dev      # Start development server
-npm run build    # Type-check + production build
-npm run preview  # Preview built app locally
-npm run lint     # Run ESLint
-```
-
-## Deployment
-
-This project is configured for Vercel deployment.
-
-- SPA rewrites are defined in [`vercel.json`](/Users/sankalpmtellur/Desktop/nasacare/vercel.json)
-- All routes are rewritten to `index.html` for client-side routing compatibility
-
-Build command:
-
-```bash
-npm run build
-```
-
-Output directory:
-
-```text
-dist/
-```
-
-## Content and Asset Notes
-
-- Product images are stored in `src/assets/`
-- Current app uses `.webp` assets for better performance
-- Update section copy directly inside files in `src/components/sections/` and `src/pages/`
-
-## Quality Expectations
-
-Before shipping changes, run:
-
-```bash
-npm run lint
-npm run build
-```
-
-This keeps the site aligned with production standards for reliability and maintainability.
-
-## Repository Status
-
-This repository is currently marked private (`"private": true` in `package.json`).
+[https://nasacare.vercel.app/contact](https://nasacare.vercel.app/contact)
