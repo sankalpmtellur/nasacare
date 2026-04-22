@@ -4,6 +4,7 @@ import { fadeUp, staggerContainer } from '../../lib/animations'
 type HowItWorksStepsProps = {
   steps?: string[]
   title?: string
+  subtitle?: string
 }
 
 const defaultSteps = ['Hold middle', 'Insert gently', 'Rotate slightly', 'Flip', 'Use second side', 'Dispose']
@@ -11,35 +12,20 @@ const defaultSteps = ['Hold middle', 'Insert gently', 'Rotate slightly', 'Flip',
 export default function HowItWorksSteps({
   steps = defaultSteps,
   title = 'How It Works',
+  subtitle = 'A clean routine in a few easy steps.',
 }: HowItWorksStepsProps) {
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="mb-8 text-center"
-      >
-        <h2 className="text-3xl font-semibold text-slate-900">{title}</h2>
+    <section className="section-shell">
+      <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }} className="mx-auto mb-8 max-w-2xl text-center">
+        <h2 className="section-title">{title}</h2>
+        <p className="section-copy">{subtitle}</p>
       </motion.div>
 
-      <motion.ol
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
-      >
+      <motion.ol variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="grid gap-4 sm:grid-cols-2 xl:grid-cols-6">
         {steps.map((step, index) => (
-          <motion.li
-            key={step}
-            variants={fadeUp}
-            whileHover={{ y: -4 }}
-            className="rounded-2xl border border-slate-100 bg-white p-5 shadow-soft"
-          >
-            <p className="text-xs font-semibold uppercase tracking-wider text-mint-700">Step {index + 1}</p>
-            <p className="mt-2 text-lg font-semibold text-slate-900">{step}</p>
+          <motion.li key={step} variants={fadeUp} className="card-pro p-4 text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.11em] text-[#3f9f8e]">Step {index + 1}</p>
+            <p className="mt-2 text-sm font-semibold text-slate-900">{step}</p>
           </motion.li>
         ))}
       </motion.ol>

@@ -1,6 +1,7 @@
-import { useState } from 'react'
-import type { FormEvent } from 'react'
 import { motion } from 'framer-motion'
+import type { FormEvent } from 'react'
+import { useState } from 'react'
+import { Mail, MapPin, Phone } from 'lucide-react'
 import { fadeUp } from '../../lib/animations'
 
 export default function ContactForm() {
@@ -12,56 +13,31 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-2 lg:px-8">
-      <motion.form
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        onSubmit={handleSubmit}
-        className="rounded-3xl border border-slate-100 bg-white p-6 shadow-soft"
-      >
-        <h2 className="text-2xl font-semibold text-slate-900">Contact Us</h2>
-        <div className="mt-5 space-y-4">
-          <input
-            required
-            type="text"
-            placeholder="Name"
-            className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none ring-mint-400 focus:ring"
-          />
-          <input
-            required
-            type="email"
-            placeholder="Email"
-            className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none ring-mint-400 focus:ring"
-          />
-          <textarea
-            required
-            rows={5}
-            placeholder="Message"
-            className="w-full resize-none rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none ring-mint-400 focus:ring"
-          />
+    <section className="container-shell grid gap-6 py-10 md:grid-cols-[1.15fr_0.85fr] md:py-14">
+      <motion.form variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} onSubmit={handleSubmit} className="card-pro p-6 md:p-8">
+        <h2 className="text-2xl font-extrabold tracking-tight text-slate-900">Send us a message</h2>
+        <p className="mt-2 text-sm text-slate-600">Our team usually replies within one business day.</p>
+
+        <div className="mt-6 space-y-4">
+          <input required type="text" placeholder="Name" className="w-full rounded-xl border border-[#dbe7e8] bg-white px-4 py-3 text-sm outline-none focus:soft-ring" />
+          <input required type="email" placeholder="Email" className="w-full rounded-xl border border-[#dbe7e8] bg-white px-4 py-3 text-sm outline-none focus:soft-ring" />
+          <textarea required rows={5} placeholder="Message" className="w-full resize-none rounded-xl border border-[#dbe7e8] bg-white px-4 py-3 text-sm outline-none focus:soft-ring" />
         </div>
-        <button
-          type="submit"
-          className="mt-5 rounded-full bg-mint-500 px-6 py-3 text-sm font-semibold text-white transition hover:scale-[1.02] hover:bg-mint-600"
-        >
-          Send message
+
+        <button type="submit" className="btn-primary mt-5">
+          Send Message
         </button>
-        {submitted ? <p className="mt-3 text-sm text-mint-700">Thanks. We will get back to you soon.</p> : null}
+        {submitted ? <p className="mt-3 text-sm font-semibold text-[#2f8c7d]">Thanks. We will get back to you soon.</p> : null}
       </motion.form>
 
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="rounded-3xl bg-mint-50 p-6"
-      >
-        <h3 className="text-xl font-semibold text-slate-900">Reach us directly</h3>
-        <p className="mt-4 text-sm text-slate-600">Email: hello@nasacare.com</p>
-        <p className="mt-2 text-sm text-slate-600">Phone: +1 (555) 123-4567</p>
-      </motion.div>
+      <motion.aside variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="card-pro bg-surface-soft p-6 md:p-8">
+        <h3 className="text-xl font-extrabold tracking-tight text-slate-900">Contact Details</h3>
+        <div className="mt-5 space-y-4 text-sm text-slate-700">
+          <p className="flex items-center gap-3"><Mail size={16} className="text-[#3f9f8e]" />contact@nasacare.com</p>
+          <p className="flex items-center gap-3"><Phone size={16} className="text-[#3f9f8e]" />+91 6363002342</p>
+          <p className="flex items-center gap-3"><MapPin size={16} className="text-[#3f9f8e]" />Rishihood University, Delhi NCR, India</p>
+        </div>
+      </motion.aside>
     </section>
   )
 }

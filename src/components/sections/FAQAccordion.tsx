@@ -1,45 +1,42 @@
-import { useState } from 'react'
-import { ChevronDown } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { ChevronDown } from 'lucide-react'
+import { useState } from 'react'
 import { fadeUp } from '../../lib/animations'
 
 const faqs = [
-  { q: 'Is NasaCare safe?', a: 'Yes, it is designed for gentle and safe everyday use.' },
-  { q: 'Is it reusable?', a: 'No. Each stick is disposable for hygiene and convenience.' },
-  { q: 'Can I carry it in public?', a: 'Yes, the packaging is travel-friendly and discreet.' },
-  { q: 'Is the tip soft?', a: 'Yes, it uses soft silicone tips for comfort.' },
+  { q: 'Is NasaCare safe?', a: 'Yes. NasaCare is designed for gentle and controlled everyday use.' },
+  { q: 'Is it reusable?', a: 'No. It is a disposable product intended for single-use hygiene.' },
+  { q: 'Can I carry it in public?', a: 'Yes. The packaging is compact, discreet, and travel-friendly.' },
+  { q: 'Is the tip soft?', a: 'Yes. The silicone tip is designed for comfort-first cleaning.' },
 ]
 
 export default function FAQAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section className="mx-auto w-full max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
-      <h2 className="text-center text-3xl font-semibold text-slate-900">Frequently Asked Questions</h2>
-      <div className="mt-8 space-y-3">
-        {faqs.map((faq, index) => {
-          const open = openIndex === index
-          return (
-            <motion.article
-              key={faq.q}
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.3 }}
-              className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-soft"
-            >
-              <button
-                type="button"
-                onClick={() => setOpenIndex((prev) => (prev === index ? null : index))}
-                className="flex w-full items-center justify-between px-5 py-4 text-left"
-              >
-                <span className="font-medium text-slate-900">{faq.q}</span>
-                <ChevronDown className={`transition ${open ? 'rotate-180 text-mint-700' : 'text-slate-500'}`} size={18} />
-              </button>
-              {open ? <p className="border-t border-slate-100 px-5 py-4 text-sm text-slate-600">{faq.a}</p> : null}
-            </motion.article>
-          )
-        })}
+    <section className="container-shell py-10 md:py-14">
+      <div className="mx-auto max-w-4xl">
+        <h2 className="section-title text-center">Frequently Asked Questions</h2>
+        <p className="section-copy text-center">Everything you need to know before you buy.</p>
+
+        <div className="mt-8 space-y-3">
+          {faqs.map((faq, index) => {
+            const open = openIndex === index
+            return (
+              <motion.article key={faq.q} variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} className="card-pro overflow-hidden">
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex((prev) => (prev === index ? null : index))}
+                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+                >
+                  <span className="text-base font-bold text-slate-900">{faq.q}</span>
+                  <ChevronDown size={18} className={`shrink-0 text-slate-500 transition ${open ? 'rotate-180 text-[#3f9f8e]' : ''}`} />
+                </button>
+                {open ? <p className="border-t border-[#deeaeb] px-5 py-4 text-sm text-slate-600">{faq.a}</p> : null}
+              </motion.article>
+            )
+          })}
+        </div>
       </div>
     </section>
   )

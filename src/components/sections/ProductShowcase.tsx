@@ -1,30 +1,28 @@
 import { motion } from 'framer-motion'
-import featuresImage from '../../assets/nasacare-features-diagram.png'
+import { CheckCircle2 } from 'lucide-react'
+import featuresImage from '../../assets/nasacare-features-diagram.webp'
 import { fadeUp } from '../../lib/animations'
 
 const bullets = ['Soft Spiral Tips', 'Safety Base', 'Anti-slip Grip', 'Dual Ended Design']
 
 export default function ProductShowcase() {
   return (
-    <section className="mx-auto grid w-full max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:px-8">
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="rounded-[2rem] bg-slate-50 p-6 shadow-soft"
-      >
-        <img src={featuresImage} alt="NasaCare features diagram" className="mx-auto w-full max-w-md object-contain" />
+    <section className="section-shell grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+      <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
+        <div className="card-pro overflow-hidden rounded-[1.4rem] bg-surface-soft p-5">
+          <img src={featuresImage} alt="NasaCare product feature diagram" className="mx-auto max-h-[440px] w-full object-contain" />
+        </div>
       </motion.div>
 
       <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
-        <h2 className="text-3xl font-semibold text-slate-900">Product Showcase</h2>
-        <p className="mt-3 text-slate-600">
-          A practical design built to keep everyday nasal hygiene simple, clean, and comfortable.
+        <h2 className="section-title">Thoughtful design that works every day</h2>
+        <p className="section-copy">
+          NasaCare combines safety-first geometry with soft-touch cleaning to support daily nasal hygiene in a simple and dependable way.
         </p>
         <ul className="mt-6 space-y-3">
           {bullets.map((item) => (
-            <li key={item} className="rounded-xl border border-slate-100 bg-white px-4 py-3 text-sm text-slate-700 shadow-soft">
+            <li key={item} className="card-pro flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-700">
+              <CheckCircle2 size={18} className="text-[#45a090]" />
               {item}
             </li>
           ))}

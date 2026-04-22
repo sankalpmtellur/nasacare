@@ -1,25 +1,19 @@
 import { motion } from 'framer-motion'
-import lifestyleImage from '../../assets/nasacare-usage-lifestyle.png'
+import lifestyleImage from '../../assets/nasacare-usage-lifestyle.webp'
 import { fadeUp } from '../../lib/animations'
 
 export default function LifestyleSection() {
   return (
-    <section className="mx-auto grid w-full max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:px-8">
+    <section className="section-shell grid items-center gap-8 lg:grid-cols-[1fr_1.08fr] lg:gap-12">
       <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
-        <h2 className="text-3xl font-semibold text-slate-900">Simple care. Real comfort.</h2>
-        <p className="mt-4 max-w-lg text-lg text-slate-600">
-          Clean your nose gently anytime, anywhere.
-        </p>
+        <h2 className="section-title">Simple care. Real comfort.</h2>
+        <p className="section-copy max-w-lg">Clean your nose gently anytime, anywhere with a discreet and hygienic routine you can trust.</p>
       </motion.div>
 
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="rounded-[2rem] bg-mint-50 p-5 shadow-soft"
-      >
-        <img src={lifestyleImage} alt="Lifestyle usage" className="w-full rounded-2xl object-cover" />
+      <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
+        <div className="card-pro overflow-hidden rounded-[1.5rem] p-3">
+          <img src={lifestyleImage} alt="Person using NasaCare lifestyle image" className="h-full w-full rounded-xl object-cover" />
+        </div>
       </motion.div>
     </section>
   )
