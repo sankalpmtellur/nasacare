@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mint-50: #eefbf8;
+  --mint-100: #d8f4ed;
+  --mint-500: #6ec7b5;
+  --mint-600: #53b49f;
+  --teal-500: #72cfc5;
+}
+
+@layer base {
+  * {
+    @apply border-slate-200;
+  }
+
+  body {
+    @apply bg-white text-slate-900 antialiased;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    background-image:
+      radial-gradient(circle at 0% 0%, rgba(110, 199, 181, 0.12), transparent 35%),
+      radial-gradient(circle at 100% 100%, rgba(114, 207, 197, 0.08), transparent 35%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .shadow-soft {
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  }
+
+  .bg-mint-50 {
+    background-color: var(--mint-50);
+  }
+
+  .bg-mint-100 {
+    background-color: var(--mint-100);
+  }
+
+  .bg-mint-500 {
+    background-color: var(--mint-500);
+  }
+
+  .bg-mint-600 {
+    background-color: var(--mint-600);
+  }
+
+  .bg-teal-500 {
+    background-color: var(--teal-500);
+  }
+
+  .text-mint-700 {
+    color: #2f8d7e;
+  }
+
+  .text-mint-600 {
+    color: var(--mint-600);
+  }
+
+  .border-mint-200 {
+    border-color: #bae8dd;
+  }
+
+  .border-mint-300 {
+    border-color: #9fdfd1;
+  }
+
+  .ring-mint-400:focus {
+    --tw-ring-color: rgba(110, 199, 181, 0.6);
+  }
+
+  .from-mint-500 {
+    --tw-gradient-from: var(--mint-500) var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(110 199 181 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+
+  .to-teal-500 {
+    --tw-gradient-to: var(--teal-500) var(--tw-gradient-to-position);
+  }
+}

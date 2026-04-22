@@ -1,0 +1,451 @@
+# NasaCare Website – Full Build Instructions
+
+Create a modern, light-themed, premium product website for **NasaCare – Disposable Nasal Cleaning Stick**.
+The website should feel like a professional consumer healthcare brand similar to Oral-B, Philips, Dove.
+
+Design must be:
+
+* minimal
+* clean
+* soft
+* trustworthy
+* product focused
+* responsive
+* animated
+
+Use images from:
+src/assets/
+
+Images available:
+
+* nasacare-hero-product.png
+* nasacare-usage-lifestyle.png
+* nasacare-packaging-box.png
+* nasacare-features-diagram.png
+
+---
+
+PRIMARY THEME
+
+Light theme only
+Background: white
+Accent color: soft mint (#6EC7B5)
+Secondary accent: pastel teal
+Rounded corners
+Soft shadows
+Modern spacing
+Minimal UI
+
+Font:
+Inter / Poppins / clean sans-serif
+
+---
+
+WEBSITE PAGES
+
+1. Home
+2. Product
+3. How It Works
+4. About
+5. FAQ
+6. Pricing / Buy
+7. Contact
+
+---
+
+NAVBAR
+
+Left:
+NasaCare logo text
+
+Right menu:
+Home
+Product
+How it works
+About
+FAQ
+Buy Now (button)
+
+Sticky navbar
+White background
+Soft shadow
+Rounded button CTA
+
+---
+
+HOME PAGE
+
+SECTION 1 — HERO
+
+Left:
+Title: NasaCare
+Subtitle: Gentle. Safe. Everyday Nasal Hygiene.
+
+Description:
+Disposable nasal cleaning sticks designed for safe, hygienic, everyday use.
+
+Buttons:
+Shop Now
+How It Works
+
+Right side image:
+src/assets/nasacare-hero-product.png
+
+Layout:
+Two column hero
+Large product visual
+
+---
+
+SECTION 2 — FEATURES
+
+4 feature cards
+
+Dual Ended
+Soft Silicone Tips
+Safety Stopper
+Hygienic Disposable
+
+Each card:
+Icon
+Title
+2 line text
+
+Grid layout 4 columns desktop
+
+---
+
+SECTION 3 — PRODUCT SHOWCASE
+
+Centered large image:
+src/assets/nasacare-features-diagram.png
+
+Right side:
+Feature bullets:
+
+Soft Spiral Tips
+Safety Base
+Anti-slip Grip
+Dual Ended Design
+
+---
+
+SECTION 4 — HOW IT WORKS
+
+Use step cards
+
+Step 1:
+Hold middle
+
+Step 2:
+Insert gently
+
+Step 3:
+Rotate slightly
+
+Step 4:
+Flip
+
+Step 5:
+Use second side
+
+Step 6:
+Dispose
+
+Use horizontal step layout
+
+---
+
+SECTION 5 — LIFESTYLE
+
+Left text:
+
+Simple care. Real comfort.
+Clean your nose gently anytime, anywhere.
+
+Right image:
+src/assets/nasacare-usage-lifestyle.png
+
+---
+
+SECTION 6 — PACKAGING
+
+Title:
+Hygienic & Portable
+
+Image:
+src/assets/nasacare-packaging-box.png
+
+Bullet points:
+
+Individually wrapped
+Travel friendly
+Pocket size
+Disposable hygienic
+
+---
+
+SECTION 7 — TESTIMONIALS
+
+3 cards
+
+"So convenient for travel."
+"Better than tissues."
+"Safe and discreet."
+
+Rounded cards
+Soft shadow
+
+---
+
+SECTION 8 — CTA
+
+Large banner
+
+Try NasaCare Today
+
+Button:
+Buy Now
+
+---
+
+FOOTER
+
+Logo
+Links
+Social icons
+Copyright
+Privacy policy
+
+---
+
+PRODUCT PAGE
+
+Hero:
+Large image:
+src/assets/nasacare-hero-product.png
+
+Title:
+NasaCare Disposable Nasal Cleaning Stick
+
+Highlights:
+
+Dual ended design
+Soft silicone tips
+Safety base
+Anti slip grip
+Disposable
+
+---
+
+PRODUCT FEATURES SECTION
+
+Image:
+src/assets/nasacare-features-diagram.png
+
+Side content:
+Feature explanation
+
+---
+
+PACKAGING SECTION
+
+Image:
+src/assets/nasacare-packaging-box.png
+
+Text:
+Box contents
+
+20 sticks
+Individual packs
+Travel box
+
+---
+
+HOW IT WORKS PAGE
+
+Top image:
+src/assets/nasacare-usage-lifestyle.png
+
+Step layout:
+
+Hold middle
+Insert gently
+Rotate
+Flip
+Dispose
+
+Add safety note box:
+
+Do not insert deep
+Use gently
+Disposable only
+
+---
+
+ABOUT PAGE
+
+Hero text:
+
+About NasaCare
+
+Description:
+
+NasaCare makes nasal hygiene simple, safe, and discreet.
+Inspired by cotton buds, designed specifically for the nose.
+
+Mission:
+Make hygiene simple
+
+Vision:
+Portable everyday hygiene
+
+Values:
+Safe
+Gentle
+Portable
+Hygienic
+
+---
+
+PRICING PAGE
+
+Cards:
+
+20 sticks
+50 sticks
+100 sticks
+
+Each card:
+
+Title
+Price placeholder
+Buy button
+
+Badge:
+Best value
+
+---
+
+FAQ PAGE
+
+Accordion style
+
+Is NasaCare safe
+Yes
+
+Reusable
+No disposable
+
+Carry in public
+Yes
+
+Tip soft
+Yes
+
+---
+
+CONTACT PAGE
+
+Form:
+
+Name
+Email
+Message
+
+Button:
+Send message
+
+Right side:
+Email placeholder
+Phone placeholder
+
+---
+
+Make the vercel.json also for deployment
+At last make the proper Readme.md file also
+
+---
+
+COMPONENTS TO BUILD
+
+Navbar
+Footer
+HeroSection
+FeatureGrid
+ProductShowcase
+HowItWorksSteps
+LifestyleSection
+PackagingSection
+Testimonials
+CTASection
+PricingCards
+FAQAccordion
+ContactForm
+
+---
+
+STYLE RULES
+
+Light theme only
+Rounded corners
+Soft shadows
+Smooth spacing
+Clean typography
+Minimal UI
+
+---
+
+ANIMATIONS
+
+Framer Motion animations
+
+Fade in on scroll
+Card hover lift
+Button hover scale
+Smooth transitions
+
+---
+
+RESPONSIVE
+
+Mobile first
+Tablet responsive
+Desktop layout
+
+---
+
+FOLDER STRUCTURE
+
+src/
+├─ components/
+│   ├─ ui/
+│   ├─ layout/
+│   ├─ sections/
+│
+├─ pages/
+│   ├─ Home.tsx
+│   ├─ Product.tsx
+│   ├─ HowItWorks.tsx
+│   ├─ About.tsx
+│   ├─ FAQ.tsx
+│   ├─ Pricing.tsx
+│   ├─ Contact.tsx
+│
+├─ assets/
+│   ├─ nasacare-hero-product.png
+│   ├─ nasacare-usage-lifestyle.png
+│   ├─ nasacare-packaging-box.png
+│   ├─ nasacare-features-diagram.png
+│
+├─ styles/
+├─ lib/
+├─ App.tsx
+├─ main.tsx
+
+---
+
+GOAL
+
+Create a premium startup landing website for NasaCare disposable nasal cleaning sticks.
+Clean, minimal, product-focused, responsive, and visually polished.
