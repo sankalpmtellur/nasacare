@@ -9,8 +9,8 @@ export default function ProductShowcase() {
   return (
     <section className="section-shell grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
       <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
-        <div className="card-pro overflow-hidden rounded-[1.4rem] bg-surface-soft p-5">
-          <img src={featuresImage} alt="NasaCare product feature diagram" className="mx-auto max-h-[440px] w-full object-contain" />
+        <div className="card-pro overflow-hidden rounded-[1.4rem] bg-surface-soft p-0 md:p-0">
+          <img src={featuresImage} alt="NasaCare product feature diagram" className="mx-auto max-h-[440px] w-full object-center" />
         </div>
       </motion.div>
 

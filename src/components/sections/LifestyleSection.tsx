@@ -11,8 +11,8 @@ export default function LifestyleSection() {
       </motion.div>
 
       <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
-        <div className="card-pro overflow-hidden rounded-[1.5rem] p-3">
-          <img src={lifestyleImage} alt="Person using NasaCare lifestyle image" className="h-full w-full rounded-xl object-cover" />
+        <div className="card-pro overflow-hidden rounded-[1.5rem] p-0">
+          <img src={lifestyleImage} alt="Person using NasaCare lifestyle image" className="h-full w-full rounded-xl object-center" />
         </div>
       </motion.div>
     </section>

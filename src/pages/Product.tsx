@@ -27,7 +27,7 @@ export default function Product() {
         </motion.div>
 
         <motion.div variants={fadeUp} initial="hidden" animate="show" transition={{ delay: 0.08 }}>
-          <div className="card-pro overflow-hidden rounded-[1.5rem] bg-[#eff8f6] p-6">
+          <div className="card-pro overflow-hidden rounded-[1.5rem] bg-[#eff8f6] p-0">
             <img src={heroProduct} alt="NasaCare product" className="mx-auto max-h-[500px] w-full object-contain" />
           </div>
         </motion.div>

@@ -27,7 +27,7 @@ export default function HeroSection() {
       </motion.div>
 
       <motion.div variants={fadeUp} initial="hidden" animate="show" transition={{ delay: 0.08 }}>
-        <div className="card-pro overflow-hidden rounded-[1.6rem] bg-[#eff8f6] p-5 md:p-7">
+        <div className="card-pro overflow-hidden rounded-[1.6rem] bg-[#eff8f6] p-5 md:p-0">
           <img src={heroProduct} alt="NasaCare disposable nasal cleaning stick" className="mx-auto max-h-[520px] w-full object-contain" />
         </div>
       </motion.div>

@@ -17,8 +17,8 @@ export default function PackagingSection({
   return (
     <section className="section-shell grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
       <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
-        <div className="card-pro overflow-hidden rounded-[1.5rem] bg-surface-soft p-5">
-          <img src={packagingImage} alt="NasaCare packaging" className="mx-auto max-h-[440px] w-full rounded-xl object-contain" />
+        <div className="card-pro overflow-hidden rounded-[1.5rem] bg-surface-soft p-0">
+          <img src={packagingImage} alt="NasaCare packaging" className="mx-auto max-h-[440px] w-full rounded-xl object-center" />
         </div>
       </motion.div>
 

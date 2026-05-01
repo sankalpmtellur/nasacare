@@ -7,7 +7,7 @@ export default function HowItWorks() {
   return (
     <>
       <section className="section-shell">
-        <motion.div variants={fadeUp} initial="hidden" animate="show" className="card-pro overflow-hidden rounded-[1.5rem] p-3">
+        <motion.div variants={fadeUp} initial="hidden" animate="show" className="card-pro overflow-hidden rounded-[1.5rem] p-0">
           <img src={usageImage} alt="NasaCare usage" className="h-auto w-full rounded-xl object-cover" />
         </motion.div>
       </section>
